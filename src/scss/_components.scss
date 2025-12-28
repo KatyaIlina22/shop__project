@@ -1,0 +1,27 @@
+.title {
+font-weight: 500;
+font-size: 55px;
+line-height: 130%;
+text-transform: uppercase;
+
+color: #a1613b;
+}
+@media(max-width:991.98px){
+      .title {
+        font-size: 45px;}
+        .text{font-size: 16px;}
+}
+@media(max-width:767.98px){
+    .title {
+        font-size: 35px;}
+        .text{font-size: 14px;}
+
+}
+.text{
+    font-family: "Google Sans", sans-serif;
+font-weight: 400;
+font-size: 18px;
+line-height: 167%;
+
+color: #4d4d4d;
+}
