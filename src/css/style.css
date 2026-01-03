@@ -1227,9 +1227,6 @@ body {
   .subscribe__button {
     font-size: 14px;
   }
-  .subscribe__form {
-    justify-content: flex-start;
-  }
 }
 @media (max-width: 991.98px) {
   .page__subscribe {
