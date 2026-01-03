@@ -1192,6 +1192,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   color: #989898;
+  margin-inline-start: 10px;
 }
 
 .subscribe__button {
