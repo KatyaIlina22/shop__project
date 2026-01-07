@@ -1,27 +1,54 @@
 .title {
-font-weight: 500;
-font-size: 55px;
-line-height: 130%;
-text-transform: uppercase;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 130%;
+  text-transform: uppercase;
 
-color: #a1613b;
+  color: #a1613b;
 }
-@media(max-width:991.98px){
-      .title {
-        font-size: 45px;}
-        .text{font-size: 16px;}
+@media (max-width: 991.98px) {
+  .title {
+    font-size: 45px;
+  }
+  .text {
+    font-size: 16px;
+  }
 }
-@media(max-width:767.98px){
-    .title {
-        font-size: 35px;}
-        .text{font-size: 14px;}
+@media (max-width: 767.98px) {
+  .title {
+    font-size: 35px;
+  }
+  .text {
+    font-size: 14px;
+  }
+}
+.text {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 167%;
 
+  color: #4d4d4d;
 }
-.text{
-    font-family: "Google Sans", sans-serif;
-font-weight: 400;
-font-size: 18px;
-line-height: 167%;
-
-color: #4d4d4d;
+.footer-text {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4c4c4c;
+}
+@media (max-width: 489.98px) {
+  .footer-text {
+    font-size: 12px;
+  }
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
