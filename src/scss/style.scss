@@ -31,10 +31,16 @@ body {
 ========================= */
 .header {
   background: #ddc0ae;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 /* Header container layout */
 .header__container {
   padding-top: 20px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
