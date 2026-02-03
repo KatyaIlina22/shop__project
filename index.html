@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,52 +19,125 @@
           <nav class="header__menu menu-header">
             <ul class="menu-header__items">
               <li class="menu-header__item">
-                <a class="menu-header__link active" href=""
+                <a class="menu-header__link" href="index.html"
+                  ><span>Home</span></a
+                >
+              </li>
+              <li class="menu-header__item">
+                <a class="menu-header__link" href="products.html"
                   ><span>Products</span></a
                 >
               </li>
               <li class="menu-header__item">
-                <a class="menu-header__link" href=""><span>Story</span></a>
+                <a class="menu-header__link" href="story.html"
+                  ><span>Story</span></a
+                >
               </li>
               <li class="menu-header__item">
-                <a class="menu-header__link" href=""
+                <a class="menu-header__link" href="manufactoring.html"
                   ><span>Manufacturing</span></a
                 >
               </li>
               <li class="menu-header__item">
-                <a class="menu-header__link" href=""><span>Packaging</span></a>
+                <a class="menu-header__link" href="packing.html"
+                  ><span>Packaging</span></a
+                >
               </li>
               <li class="menu-header__item">
-                <a class="menu-header__link" href=""><span>Team</span></a>
+                <a class="menu-header__link" href="team.html"
+                  ><span>Team</span></a
+                >
               </li>
             </ul>
           </nav>
+
           <!-- Header actions (icons like cart, search, user) -->
           <div class="header__actions actions-header">
-            <a class="actions-header__link" href=""
-              ><img
+            <button type="button" class="actions-header__link">
+              <img
                 class="actions-header__item"
                 src="./images/header_1.svg"
                 alt=""
               />
-            </a>
-            <a class="actions-header__link" href=""
+            </button>
+            <a class="actions-header__link" href="cart.html"
               ><img
                 class="actions-header__item"
                 src="./images/header_2.svg"
                 alt=""
               />
             </a>
-            <a class="actions-header__link" href=""
-              ><img
+            <button type="button" class="actions-header__link">
+              <img
                 class="actions-header__item"
+                id="authorisation"
                 src="./images/header_3.svg"
                 alt=""
               />
-            </a>
+            </button>
           </div>
           <!-- Burger button for mobile menu -->
           <button class="header__burger burger"><span></span></button>
+
+          <div class="header__modal modal hidden">
+            <button id="closeModal" class="modal__close">✖</button>
+            <div id="loginView" class="modal__view hidden">
+              <h2>Вхід</h2>
+              <form id="loginForm">
+                <input
+                  class="modal__input"
+                  id="loginEmail"
+                  name="email"
+                  type="text"
+                  placeholder="email"
+                />
+                <p id="errorLogLogin" name="email-error"></p>
+                <input
+                  class="modal__input"
+                  id="loginPassword"
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                />
+                <p id="errorLogPassword" name="password-error"></p>
+                <button type="button" id="loginBtn">Увійти</button>
+              </form>
+              <p>
+                Немає акаунту?
+                <button id="goRegister">Зареєструватись</button>
+              </p>
+            </div>
+            <div id="registerView" class="modal__view hidden">
+              <h2>Реєстрація</h2>
+              <form id="registerForm">
+                <input
+                  class="modal__input"
+                  id="registerEmail"
+                  name="email"
+                  type="text"
+                  placeholder="email"
+                />
+                <p id="errorRegLogin" name="email-error"></p>
+                <input
+                  class="modal__input"
+                  id="registerPassword"
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                />
+                <p id="errorRegPassword" name="password-error"></p>
+                <button type="button" id="registerBtn">Створити акаунт</button>
+              </form>
+              <p>
+                Вже є акаунт?
+                <button id="goLogin">Увійти</button>
+              </p>
+            </div>
+            <div id="userView" class="modal__view hidden">
+              <p>Вітаю! Ви вже зареєстровані</p>
+              <button type="button" id="logoutBtn">Вийти з акаунту</button>
+            </div>
+          </div>
         </div>
       </header>
       <!-- Main -->
@@ -231,8 +304,12 @@
         ========================= -->
         <section class="page__products products">
           <div class="products__container">
-            <div class="products__title">Our Products</div>
+            <h2 class="products__title">Our Products</h2>
+            <a class="products__link" href="products.html">
+              View all products →</a
+            >
             <!-- Products list -->
+
             <div class="products__items">
               <!-- Single product item -->
               <div class="products__item item-products">
@@ -560,5 +637,5 @@
       </footer>
     </div>
   </body>
-  <script src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </html>

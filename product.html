@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__container">
+          <!-- Logo -->
+          <a class="header__logo logo-header" href="">
+            <img class="logo-header__image" src="./images/Logo.svg" alt="" />
+          </a>
+          <!-- Navigation menu -->
+          <nav class="header__menu menu-header">
+            <ul class="menu-header__items">
+              <li class="menu-header__item">
+                <a class="menu-header__link" href="index.html"
+                  ><span>Home</span></a
+                >
+              </li>
+              <li class="menu-header__item">
+                <a class="menu-header__link" href="products.html"
+                  ><span>Products</span></a
+                >
+              </li>
+              <li class="menu-header__item">
+                <a class="menu-header__link" href="story.html"
+                  ><span>Story</span></a
+                >
+              </li>
+              <li class="menu-header__item">
+                <a class="menu-header__link" href="manufactoring.html"
+                  ><span>Manufacturing</span></a
+                >
+              </li>
+              <li class="menu-header__item">
+                <a class="menu-header__link" href="packing.html"
+                  ><span>Packaging</span></a
+                >
+              </li>
+              <li class="menu-header__item">
+                <a class="menu-header__link" href="team.html"
+                  ><span>Team</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Header actions (icons like cart, search, user) -->
+          <div class="header__actions actions-header">
+            <button type="button" class="actions-header__link">
+              <img
+                class="actions-header__item"
+                src="./images/header_1.svg"
+                alt=""
+              />
+            </button>
+            <a class="actions-header__link" href="cart.html"
+              ><img
+                class="actions-header__item"
+                src="./images/header_2.svg"
+                alt=""
+              />
+            </a>
+            <button type="button" class="actions-header__link">
+              <img
+                class="actions-header__item"
+                id="authorisation"
+                src="./images/header_3.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <!-- Burger button for mobile menu -->
+          <button class="header__burger burger"><span></span></button>
+          <div class="header__modal modal hidden">
+            <button id="closeModal" class="modal__close">✖</button>
+            <div id="loginView" class="modal__view hidden">
+              <h2>Вхід</h2>
+              <form id="loginForm">
+                <input
+                  class="modal__input"
+                  id="loginEmail"
+                  name="email"
+                  type="text"
+                  placeholder="email"
+                />
+                <p id="errorLogLogin" name="email-error"></p>
+                <input
+                  class="modal__input"
+                  id="loginPassword"
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                />
+                <p id="errorLogPassword" name="password-error"></p>
+                <button type="button" id="loginBtn">Увійти</button>
+              </form>
+              <p>
+                Немає акаунту?
+                <button id="goRegister">Зареєструватись</button>
+              </p>
+            </div>
+            <div id="registerView" class="modal__view hidden">
+              <h2>Реєстрація</h2>
+              <form id="registerForm">
+                <input
+                  class="modal__input"
+                  id="registerEmail"
+                  name="email"
+                  type="text"
+                  placeholder="email"
+                />
+                <p id="errorRegLogin" name="email-error"></p>
+                <input
+                  class="modal__input"
+                  id="registerPassword"
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                />
+                <p id="errorRegPassword" name="password-error"></p>
+                <button type="button" id="registerBtn">Створити акаунт</button>
+              </form>
+              <p>
+                Вже є акаунт?
+                <button id="goLogin">Увійти</button>
+              </p>
+            </div>
+            <div id="userView" class="modal__view hidden">
+              <p>Вітаю! Ви вже зареєстровані</p>
+              <button type="button" id="logoutBtn">Вийти з акаунту</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Main -->
+      <main class="page__product product">
+        <div class="product__container">
+          <section class="product__main">
+            <div class="product__galery">
+              <img class="product__image" src="" alt="" />
+            </div>
+            <div class="product__body">
+              <h3 class="product__title"></h3>
+              <div class="product__buy">
+                <div class="product__price"></div>
+
+                <button class="product__cart" id="addToCart">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="product__characteristics characteristics">
+            <h2>Characteristics</h2>
+            <div class="characteristics__items"></div>
+          </section>
+
+          <section class="product__description description">
+            <h2>Description</h2>
+            <p class="description__text"></p>
+          </section>
+
+          <section class="product__reviews reviews">
+            <h2>Reviews</h2>
+            <div class="reviews__items"></div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <!-- 1. Social block -->
+          <div class="footer__items">
+            <div class="footer__item item-footer">
+              <div class="item-footer__text footer-text">
+                Learn To Love Growth And Change And You Will Be A Success.
+              </div>
+              <div class="item-footer__icons">
+                <a class="item-footer__icon" href=""
+                  ><img class="item-footer__img" src="images/icon_1.svg" alt=""
+                /></a>
+                <a class="item-footer__icon" href=""
+                  ><img class="item-footer__img" src="images/icon_2.svg" alt=""
+                /></a>
+                <a class="item-footer__icon" href=""
+                  ><img class="item-footer__img" src="images/icon_3.svg" alt=""
+                /></a>
+                <a class="item-footer__icon" href=""
+                  ><img class="item-footer__img" src="images/icon_4.svg" alt=""
+                /></a>
+              </div>
+            </div>
+
+            <!-- 2. Footer menu -->
+            <div class="footer__item item-footer">
+              <nav class="item-footer__menu">
+                <ul class="item-footer__list">
+                  <li>
+                    <a class="item-footer__link footer-text" href=""
+                      >Best Seller</a
+                    >
+                  </li>
+                  <li>
+                    <a class="item-footer__link footer-text" href=""
+                      >Skin Products</a
+                    >
+                  </li>
+                  <li>
+                    <a class="item-footer__link footer-text" href=""
+                      >beauty products</a
+                    >
+                  </li>
+                  <li>
+                    <a class="item-footer__link footer-text" href=""
+                      >Track your order</a
+                    >
+                  </li>
+                  <li>
+                    <a class="item-footer__link footer-text" href=""
+                      >About Us</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- 3. Contacts -->
+            <div class="footer__item item-footer">
+              <address class="item-footer__contacts">
+                <div class="item-footer__contact">
+                  <img src="images/icon_5.svg" alt="" />
+                  <span class="item-footer__adress footer-text"
+                    >11772 Tabrzi Street NW, Suite 21389, Atlanta
+                  </span>
+                </div>
+
+                <div class="item-footer__contact">
+                  <img src="images/icon_5.svg" alt="" />
+                  <a
+                    class="item-footer__phone footer-text"
+                    href="tel:+1789123456"
+                    >+1 789 123 456</a
+                  >
+                </div>
+
+                <div class="item-footer__contact">
+                  <img src="images/icon_5.svg" alt="" />
+                  <a
+                    class="item-footer__email footer-text"
+                    href="mailto:hello@dangila.com"
+                    >hello@dangila.com</a
+                  >
+                </div>
+              </address>
+            </div>
+            <!-- 4. Subscribe form -->
+            <div class="footer__item item-footer">
+              <div class="item-footer__title footer-text">
+                Receive special offers and get our latest updates.
+              </div>
+              <form class="item-footer__form">
+                <label class="visually-hidden" for="footer-email">
+                  Email address
+                </label>
+
+                <input
+                  id="footer-email"
+                  class="item-footer__input"
+                  type="email"
+                  placeholder="Enter e-mail"
+                  aria-label="Email"
+                  required
+                />
+                <button class="item-footer__button" type="submit">JOIN</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/product.js"></script>
+</html>
