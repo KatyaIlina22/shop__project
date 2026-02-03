@@ -42,7 +42,7 @@ export function createCartItem(item, mode) {
             <span class="item__price">$ ${(product.price * item.quantity).toFixed(2)
         }</span >
         ${mode === 'cart' ? `
-           <button class="item__button remove-btn"><img class="item__img"  src="../images/remove.jpg" "> </button>
+           <button class="item__button remove-btn"><img class="item__img"  src="images/remove.jpg" "> </button>
         ` : ''}
            
        </div>
